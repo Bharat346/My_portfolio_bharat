@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <style>
+        body{
+            background-color: rgb(70, 240, 9);
+        }
+        .card {
+          margin-right: 15px; 
+          margin-bottom: 15px; 
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      
+        .card-img-top {
+          width: 300px;
+          height: 200px;
+          object-fit: cover; 
+        }
+        .main-content{
+          height: 350px;
+          background-color: aliceblue;
+          background-image:url('https://wallpapercave.com/wp/wp3190739.jpg') ;
+          background-size:cover;
+        }
+        .main-content {
+            transition: background-image 0.5s ease-in-out;
+        }
+        
+        .main-content:hover {
+            background-image: url('https://png.pngtree.com/background/20230527/original/pngtree-home-interior-design-with-black-walls-and-wooden-furniture-picture-image_2758154.jpg');
+        }
+        
+        .card:hover {
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 8px 8px 8px rgb(231, 58, 5);
+            position: relative;
+            bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+  <div class="main-content">
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="gg-menu" id="icon"></i>
+    </button>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu - Bar</h5>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+            <hr>
+            <li><a class="dropdown-item" href="notes.html">short-Notes</a></li>
+            <hr>
+            <li><a class="dropdown-item disabled" href="#">Current-Bulatin</a></li>
+            <hr>
+            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="text-center">
+      <img style="border-radius: 100px; border: 3px solid rgb(153, 7, 249);" width="150px" height="150px" src="https://yt3.googleusercontent.com/v3EcHN9eNcQtErSgEVnTF6rrxeitnaI-zbfGGawBy-7sdd2klNMj_CwYB0CDBFvPAohIy0_o=s176-c-k-c0x00ffffff-no-rj" alt="Bharat">
+      <h2 style="color: rgb(9, 254, 13);" class="mt-3" style="font-family: 'YourCoolFont', sans-serif;">Bharat Kumar</h2>
+    </div>
+
+    <hr>
+  </div>
+      <hr>
+      <h3 style="text-align: center;"><i style=" text-decoration: underline; color: rgb(0, 30, 255);">Projects</i></h3>
+      <hr>
+      <div class="card-group">
+        
+        <div class="card">
+          <img style="border-radius: 30px; box-shadow: 2px 2px 2px blue;" width="200px" height="200px"  src="https://img.freepik.com/premium-vector/tic-tac-toe-game-linear-outline-icon-colour-neon-style-brick-wall-background-light-icon_549897-1770.jpg" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> 1.)TIC-TAC-TOE</h5>
+            <p class="card-text">This JavaScript Tic Tac Toe game is created for entertainment purposes. The developer holds no responsibility for the accuracy or outcomes. Use at your own discretion. Enjoy the game!</p>
+            <p>Code : <a href="https://github.com/Bharat346/Tic-Tac-Toe-game">click to code file</a> </p>
+            <p>Code test : <a href="https://bharat346.github.io/Tic-Tac-Toe-game/">click to play</a> </p>
+
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img style="border-radius: 10px; box-shadow: 2px 2px 2px blue;" width="80px" height="80px" src="https://t3.ftcdn.net/jpg/05/69/96/48/360_F_569964847_Wa3tNpPYRGABpplPGSFT3LLB7E2wU0jb.jpg" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">2.) QUIZ-GAME</h5>
+            <p class="card-text">This quiz game project, created with the C programming language, is intended for educational and recreational purposes only. 
+                The developer of this quiz game project is not responsible for any inaccuracies, errors, or consequences arising from the use of the quiz game. Users are encouraged to use the project responsibly and ethically.</p>
+            <p>Code file : <a href="https://drive.google.com/file/d/1Z1yAEc1oIhlVy7uurWAzaB55g8KA_63Y/view?usp=drive_link">click to code file</a> </p>
+            <p>Code ppt : <a href="https://1drv.ms/p/s!Ar0-4m82ZF8Q3Vln3KZoy8tAs8-F?e=Ajq5ib">click to see ppt</a> </p>
+  
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="card-group">
+        
+        <div class="card">
+          <img style="border-radius: 30px; box-shadow: 2px 2px 2px blue;" width="200px" height="200px"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVGZhB2wO1Y43n2iCA3AkjGVHUIwEBaXS6uw&usqp=CAU" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> 3.)Explore-Number-game</h5>
+            <p class="card-text">This JavaScript Explore-Number-game is created for entertainment purposes. The developer holds no responsibility for the accuracy or outcomes. Use at your own discretion. Enjoy the game!</p>
+            <p>Code : <a href="https://github.com/Bharat346/Explore_Number_game">click to code file</a> </p>
+            <p>Code test : <a href="https://bharat346.github.io/Explore_Number_game/">click to play</a> </p>
+
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img style="border-radius: 10px; box-shadow: 2px 2px 2px blue;" width="80px" height="80px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSykywONgn2eSPkPEs4zHKYcvyBkGS5vf77Sw&usqp=CAU" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">4.) RANDOM JOKES GENERATOR</h5>
+            <p class="card-text">🌐 Welcome to the Random Jokes Generator – Where Laughter Knows No Boundaries! 🌐<br>
+
+                Looking for a quick pick-me-up? You're in the right place! Our Random Jokes Generator, powered by JavaScript, brings you a delightful blend of humor in both Hindi and English. Brace yourself for a diverse collection of jokes that will keep you smiling throughout the day.</p>
+                <p>Code : <a href="https://github.com/Bharat346/Funny_Jokes">click to code file</a> </p>
+                <p>Code test : <a href="https://bharat346.github.io/Funny_Jokes/">click to play</a> </p>
+    
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="card-group">
+        
+        <div class="card">
+          <img style="border-radius: 30px; box-shadow: 2px 2px 2px blue;" width="300px" height="200px"  src="https://micgadget.com/wp-content/uploads/2023/12/02b7e4ad-e26d-4903-b9f4-c694e3e9a080.jpg" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> 5.)Joke-Bot</h5>
+            <p class="card-text">🤖 Welcome to the Jokes Bot! Your Daily Dose of Laughter! 🤖<br>
+
+                Get ready to tickle your funny bone with our Python-powered Jokes Telegram Bot. Whether you prefer the humor of Hindi or the wit of English, we've got a joke for everyone! Our bot is your go-to source for light-hearted moments, delivering a daily dose of laughter to brighten your day.</p>
+            <p>Code : <a href="https://drive.google.com/file/d/1Z7e3AR80oInuww4D5vxUeLDyAQk8oVOu/view?usp=drivesdk">click to code file</a> </p>
+            <p>Code test : <a href="https://t.me/BhkJokes_Bot">click to Test</a> </p>
+
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img style="border-radius: 10px; box-shadow: 2px 2px 2px blue;" width="80px" height="80px" src="https://lh3.googleusercontent.com/-WbZ4Wbdt9cI/Ya42uc6H-iI/AAAAAAAAHu4/n14SIeoEO9EP6HYkjxFoQ_A6eCs1hQP7ACNcBGAsYHQ/s1600/1638807221083217-0.png" class="card-img-top mx-auto d-block my-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">6.) DOCUMENT_CONVERTER_BOT</h5>
+            <p class="card-text">Welcome to our Document Converter Telegram Bot – your versatile tool for seamless document format transformations! This Python-powered bot is designed to make your document conversion tasks a breeze, allowing you to switch between various formats effortlessly. Whether you need to convert PDFs to DOCX, DOCX to PDF, CSV to XLSX, XLSX to JSON, and more, our bot has got you covered.</p>
+                <p>Code : <a href="https://drive.google.com/file/d/1AB_dNFNv1_48yugGcWDGIh4o2bkaigi0/view?usp=drivesdk">click to code file</a> </p>
+                <p>Code test : <a href="https://t.me/Files_Converter_py_bot">click to Test</a> </p>
+    
+            <p class="card-text"><small class="text-body-secondary">Last updated 21/12/2023</small></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

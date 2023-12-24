@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Notes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("lYkVLeLudMaGVE5Ho");
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <style>
+        body{
+            background-color: rgb(23, 228, 13);
+        }
+        
+        #homePage {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .main-content{
+          height: 300px;
+          background-color: aliceblue;
+          background-image:url('https://wallpapercave.com/wp/wp3190739.jpg') ;
+          background-size:cover;
+        }
+        .main-content {
+            transition: background-image 0.5s ease-in-out;
+        }
+        
+        .main-content:hover {
+            background-image: url('https://png.pngtree.com/background/20230527/original/pngtree-home-interior-design-with-black-walls-and-wooden-furniture-picture-image_2758154.jpg');
+        }
+        #offcanvasExample:hover {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #homePage, #notesPage {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #notesPage {
+            display: none;
+        }
+
+        #homePage:hover, #notesPage:hover {
+            box-shadow: 4px 4px 4px rgb(133, 5, 238);
+        }
+
+        #accessForm input:hover {
+            border: 3px solid rgb(133, 5, 238);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+  
+  <div class="main-content">
+    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="gg-menu" id="icon"></i>
+    </button>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu - Bar</h5>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+            <hr>
+            <li><a class="dropdown-item" href="notes.html">short-Notes</a></li>
+            <hr>
+            <li><a class="dropdown-item disabled" href="#">Current-Bulatin</a></li>
+            <hr>
+            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="text-center">
+      <img style="border-radius: 100px; border: 3px solid rgb(153, 7, 249);" width="150px" height="150px" src="https://yt3.googleusercontent.com/v3EcHN9eNcQtErSgEVnTF6rrxeitnaI-zbfGGawBy-7sdd2klNMj_CwYB0CDBFvPAohIy0_o=s176-c-k-c0x00ffffff-no-rj" alt="Bharat">
+      <h2 style="color: rgb(9, 254, 13);" class="mt-3" style="font-family: 'YourCoolFont', sans-serif;">Bharat Kumar</h2>
+    </div>
+
+    <hr>
+  </div>
+      <hr>
+      <div id="notesPage" style="display: none;">
+      <h3 style="text-align: center;"><i style=" text-decoration: underline; color: rgb(0, 30, 255);">Short_Notes</i></h3>
+      <hr>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <b>🚀 Description</b>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+               <b> 🚀 Motivational Start:</b> <br>
+
+                Greetings, aspirants! As you embark on your journey to conquer the challenging realms of JEE and NEET, remember this: every step you take today brings you closer to the triumph of tomorrow. The path you've chosen is demanding, but it is in these challenges that the seeds of success are sown. <br>
+                
+                <br>Today, let's delve into a powerful tool that will accompany you on this journey – the art of crafting short notes. Imagine them as your trusty companions, condensed packets of knowledge that serve as a roadmap through the vast landscapes of your syllabus. As you navigate through complex equations, intricate theories, and biological wonders, these notes become your secret weapon, your personalized guide to success.
+                <br>
+                
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <b>🌟 The Importance of Short Notes</b>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                
+                
+                In the dynamic world of JEE and NEET, where time is a precious commodity, short notes emerge as invaluable assets. Here's why:
+                
+                <br><b>Efficiency</b>: Short notes distill voluminous information into concise, easy-to-digest nuggets. They allow you to cover more ground in less time, making your study sessions efficient and productive. <br>
+                
+                <br><b>Retention</b>: The act of condensing information into brief notes aids in better retention. As you jot down key concepts, you reinforce your understanding, creating a mental roadmap that you can revisit effortlessly. <br>
+                
+                <br><b>Quick Revision</b>: During the eleventh hour, your short notes become your go-to companions. Swift revision before exams becomes a breeze, helping you reinforce crucial details and boost your confidence. <br>
+                
+                <br><b>Focused Study</b>: Short notes keep you focused on the essentials. In the sea of information, they act as anchors, guiding you towards the core concepts that matter the most in the JEE and NEET examinations.
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <b>🔥 Motivational Ending</b>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                As you embark on this expedition towards success, remember that every challenge is an opportunity, and every setback is a stepping stone. Your dedication, combined with the strategic use of tools like short notes, transforms obstacles into triumphs. Keep the flame of motivation burning bright within you, for you are not merely preparing for exams – you are sculpting the masterpiece of your future. <br>
+                
+                <br>In the words of Aristotle, "We are what we repeatedly do. Excellence, then, is not an act but a habit." Embrace the habit of excellence, and let your short notes be the brushstrokes that paint the canvas of your success. The journey is tough, but so are you. Best of luck, aspirants – go forth and conquer! 🚀✨
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <h5><i>🌐To Access Short Notes Follow This Link : ==></i><a href="https://drive.google.com/drive/folders/1--5ypOvWwNrmlMolQED4LlrAx81uBe5Y">Click to get notes</a></h5>
+        <h5></h5>
+      </div>
+      </div>
+      
+    <div id="homePage" style="box-shadow: 4px 4px 4px rgb(133, 5, 238);  border-radius: 10px;">
+      <h1>Welcome to the Notes Page</h1>
+      
+      <h6 style="text-align: center;">To Acsses Notes Please Fill This Form</h6>
+      <hr>
+      <form id="accessForm" action="/submit-form" onsubmit="return requestAccess()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+          
+          <label for="phoneNumber">Phone Number:(Optional)</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter your mobile number"><br>
+
+          <button type="submit">Request Access</button>
+      </form>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      function generateOTP() {
+          // Generate a simple 4-digit OTP for demonstration purposes
+          return Math.floor(1000 + Math.random() * 9000).toString();
+      }
+
+      function setLocalStorage(key, value) {
+          localStorage.setItem(key, value);
+      }
+
+      function getLocalStorage(key) {
+          return localStorage.getItem(key);
+      }
+
+      function saveUserToJson(user) {
+          // Retrieve existing users from JSON file
+          const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+          // Add the new user
+          existingUsers.push(user);
+
+          // Save the updated users array back to the JSON file
+          localStorage.setItem('users', JSON.stringify(existingUsers));
+      }
+
+      function requestAccess() {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          fetch('http://localhost:5000/submit-form', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ name, email }),
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log('Success:', data);
+              alert('Form submitted successfully!');
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              alert('Internal Server Error');
+          });
+          // Check if the user has already submitted the form in the last 30 days or has signed in
+          if (getLocalStorage("formSubmitted") === "true" || getLocalStorage("signedIn") === "true") {
+              alert("You have already submitted the form or signed in. Accessing notes page.");
+              document.getElementById("homePage").style.display = "none";
+              document.getElementById("notesPage").style.display = "block";
+              return false; // Prevent form submission
+          }
+
+          try {
+              // Generate and send OTP
+              const otp = generateOTP();
+              console.log("Sending OTP:", otp);
+
+              let msg = `Your OTP is : ${otp}`
+              emailjs.send("service_euam6gp", "template_u412h3g", {
+                  to_name: "User",
+                  from_name: "Bharat kumar",
+                  email_id: "bharat030406@gmail.com",
+                  message: msg,
+                  reply_to: "reply",
+                  email_to: email,
+                  subject: "OTP from bharat",
+              })
+              .then(function(response) {
+                  console.log("Email sent successfully:", response);
+              })
+              .catch(function(error) {
+                  console.log("Error sending email:", error);
+                  alert("Error sending email. Please try again later.");
+              });
+
+              // Save user information to JSON file
+              saveUserToJson({ name, email });
+
+              // Show notes page if OTP is correct
+              const enteredOTP = prompt("Enter the OTP sent to your email:");
+              if (enteredOTP === otp) {
+                  console.log("OTP verification successful. Accessing notes page.");
+                  document.getElementById("homePage").style.display = "none";
+                  document.getElementById("notesPage").style.display = "block";
+
+                  // Set local storage to indicate that the user has signed in
+                  setLocalStorage("signedIn", "true");
+              } else {
+                  console.log("Incorrect OTP. Redirecting to the home page.");
+                  alert("Incorrect OTP. Redirecting to the home page.");
+              }
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+
+          // Prevent form submission
+          return false;
+      }
+      function switchToHomePage() {
+            document.getElementById('notesPage').style.opacity = 0;
+            document.getElementById('homePage').style.opacity = 1;
+        }
+
+      function switchToNotesPage() {
+            document.getElementById('homePage').style.opacity = 0;
+            document.getElementById('notesPage').style.opacity = 1;
+      }
+
+      
+
+
+  </script>
+      
+</body>
+</html>
