@@ -1,0 +1,363 @@
+body{
+    background-color: rgb(10, 239, 25);
+  }
+  .card {
+    margin-right: 15px; 
+    margin-bottom: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+  }
+
+  #carouselExample {
+    width: 500px; /* Set your desired width */
+    height: 300px; /* Set your desired height */
+    
+    margin: auto;
+  }
+
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+  }
+  #news{
+    position: absolute;
+    bottom:41%;
+    right: 0px;
+  }
+  .main-content{
+    height: 350px;
+    background-color: aliceblue;
+    background-image:url('https://wallpapercave.com/wp/wp3190739.jpg') ;
+    background-size:cover;
+    
+  }
+  @media screen and (min-width:1050px) {
+    .main-content{
+      height: 550px;
+    }
+  }
+  .news-container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .news-article {
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+  }
+
+  .news-image {
+      width: 30%;
+      float: left;
+  }
+
+  .news-description {
+      width: 70%;
+      float: left;
+      padding: 10px;
+  }
+
+  .news-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .news-link {
+      display: block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+  }
+  #icon {
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  #icon.active {
+      transform: rotate(90deg); /* Adjust the rotation angle as needed */
+  }
+  .card:hover {
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 8px 8px 8px rgb(5, 197, 231);
+      position: relative;
+      bottom: 5px;
+  }
+  button:hover {
+      transition: background-color 0.3s ease-in-out;
+      color: #ddeb18; 
+  }
+  .main-content {
+      transition: background-image 0.5s ease-in-out;
+  }
+  
+  .main-content:hover {
+      background-image: url('https://png.pngtree.com/background/20230527/original/pngtree-home-interior-design-with-black-walls-and-wooden-furniture-picture-image_2758154.jpg');
+  }
+  
+  table tbody tr:hover {
+      background-color: #f5f5f5; /* Change to your desired hover background color */
+  }
+  
+  img {
+      border-radius: 25%;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+  }
+  img:hover {
+      transform: scale(1.1); /* Add a slight scale effect on image hover */
+  }
+  #offcanvasTop{
+    background-color: aqua;
+  }
+  #mot {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      max-width: 400px; /* Set a maximum width if needed */
+      margin: auto; /* Center the container */
+      text-align: center; /* Center text within the container */
+  }
+  
+  #mot p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+  }
+  #mot_btn{
+       position: absolute;
+       right: 5%;
+       top: 1%;
+  }
+  #menu_btn{
+    color: #f10784;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+  }
+  #me{
+    position: relative;
+    top: 20px;
+  }
+  @media screen and (max-width: 850px) {
+/* Styles for screens with a width of 850 pixels or less */
+
+.card {
+margin-right: 0;
+}
+
+.card-img-top {
+width: 100%;
+height: auto;
+}
+
+#carouselExample {
+width: 100%;
+height: auto;
+}
+
+.carousel-inner,
+.carousel-item {
+width: 100%;
+height: auto;
+}
+
+.carousel-item img {
+object-fit: contain;
+}
+
+#news {
+position: static;
+margin-top: 15px;
+margin-bottom: 15px;
+right: auto;
+}
+
+.main-content {
+height: auto;
+background-size: contain;
+}
+
+@media screen and (min-width: 1050px) {
+.main-content {
+  height: auto;
+}
+}
+
+/* Add more styles as needed for smaller screens */
+}
+@media screen and (max-width: 850px) {
+    /* Styles for screens with a width of 850 pixels or less */
+
+    .card {
+      width: 100%;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* You may adjust this based on your preference */
+    }
+
+    #carouselExample {
+      width: 100%;
+      max-width: 70%;
+      height: auto;
+    }
+
+    .carousel-inner,
+    .carousel-item {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel-item img {
+      object-fit: contain; /* You may adjust this based on your preference */
+    }
+
+    .main-content {
+      height: auto;
+      background-size: contain;
+    }
+
+    @media screen and (min-width: 1050px) {
+      .main-content {
+        height: auto;
+      }
+    }
+
+    table {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    
+
+    /* Add more styles as needed for smaller screens */
+  }
+
+
+  @media screen and (max-width: 508px) {
+    /* Styles for screens with a width of 508 pixels or less */
+
+    .card {
+      width: 100vw;
+      margin: auto;
+    }
+
+    .card-img-top {
+      width: 100vw;
+      height: auto;
+      object-fit: cover;
+    }
+
+    #carouselExample {
+      width: 100vw;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .carousel-inner,
+    .carousel-item {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel-item img {
+      object-fit: cover; /* You may adjust this based on your preference */
+    }
+
+    .main-content {
+      height: auto;
+      background-size: cover;
+    }
+
+    @media screen and (max-width:850px) {
+      .main-content {
+        height: auto;
+      }
+    }
+
+    table {
+      width: 100vw;
+      max-width: 100vw;
+      
+    }
+    body{
+        font-size: 15px;
+    }
+    btn{
+        font-size: 10px;
+    }
+    
+
+    img {
+      
+      width: 120px;
+      height: 120px;
+      border-radius: 0;
+      margin-bottom: 10px;
+    }
+
+    #news {
+      position: static;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      right: auto;
+    }
+
+    .main-content {
+      height: auto;
+      background-size: contain;
+    }
+
+    /* Add more styles as needed for smaller screens */
+  }
+  #mot_btn {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  #mot_btn:hover {
+    background-color: #ffe54c; /* Change to your desired hover background color */
+    color: #333; /* Change to your desired hover text color */
+  }
+
+  @media screen and (max-width:476px) {
+    body{
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width:407px) {
+    body{
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width:322px) {
+    body{
+      font-size: 9px;
+    }
+  }
